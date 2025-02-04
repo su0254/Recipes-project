@@ -13,11 +13,6 @@ function App() {
 
     <Provider store={store}>
       <RouterProvider router={router} />
-
-      {/* <IsAdd value={[isAdd, setIsAdd]}>
-        <RecipesList />
-      </IsAdd> */}
-
     </Provider>
 
   </>)

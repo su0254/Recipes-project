@@ -27,8 +27,8 @@ const AddNewRecipe = () => {
     const user = useContext(CurrentUser);
 
     const schema = object().shape({
-        title: string().required("Title is a required field").min(1),
-        description: string().required("Description is a required field").min(1).max(50),
+        title: string().required("Title is a required field").min(5),
+        description: string().required("Description is a required field").min(10).max(50),
         ingredients:array().required(),
         instructions: string().required("Instructions is a required field").max(50)
     });
@@ -47,7 +47,6 @@ const AddNewRecipe = () => {
         setValue("authorId", Number(user.user.id))
         dispatch(addRecipe(recipe));
         handleClose();
-        //setIsAdd(false);
         reset();
     };
 

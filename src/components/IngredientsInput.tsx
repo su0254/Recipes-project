@@ -37,7 +37,7 @@ const IngredientsInput: React.FC<{ onIngredientsChange: (ingredients: string[]) 
                         variant="standard"
                         value={ingredient}
                         onChange={(e) => handleInputChange(index, e.target.value)}
-                        onKeyDown={(e) => handleKeyDown(index, e)}
+                        onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => handleKeyDown(index, e)}
                         placeholder="enter ingredient"
                     />
                     </div>

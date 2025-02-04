@@ -9,7 +9,7 @@ const RecipeDetails = () => {
     const { id } = useParams<{ id: string }>();
     const { recipes: { list: recipesList } } = useSelector((store: StoreType) => store);
     
-    const recipe: RecipeType | undefined = recipesList.find(r => r.id === Number(id));
+    const recipe: RecipeType = recipesList.find((r: { id: number; }) => r.id === Number(id));
 
     if (!recipe) {
         return <Typography variant="h6">recipe is not found</Typography>;

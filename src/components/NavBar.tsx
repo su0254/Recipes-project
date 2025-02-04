@@ -29,10 +29,9 @@ const navBar = () => {
           About
         </Typography>
         </Link>
-      {/* //onClick={() => setIsShow(!isShow)} */}
+
       <Link to='/showAllRecipes' style={linkStyle}>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          {/* {isShow ? 'Hide Recipes' : 'Show All Recipes'} */}
           show
         </Typography>
       </Link>

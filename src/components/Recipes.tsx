@@ -33,7 +33,7 @@ const Recipes = () => {
         border: 'none',
         cursor: 'pointer',
         transition: 'background-color 0.3s',
-        maxWidth: '100%' // שינוי זה ל-100% כדי להתאים לרוחב הקונטיינר
+        maxWidth: '100%'
     }
 
     const { recipes: { list: recipesList } } = useSelector((store: StoreType) => store);
@@ -41,7 +41,7 @@ const Recipes = () => {
     return (
         <>
             <div style={containerStyle}>
-                {recipesList.map(r => <Link to={`${r.id}`} style={linkStyle} key={r.id}>{r.title}</Link>)}
+                {recipesList.map((r:{id:number, title:string}) => <Link to={`${r.id}`} style={linkStyle} key={r.id}>{r.title}</Link>)}
             </div>
             <Outlet />
         </>
